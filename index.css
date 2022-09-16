@@ -1,0 +1,138 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+header{
+    text-align: center;
+    margin-top: 32px;
+    height: calc(128px + 32px);
+}
+header img{
+    width: 100%;
+    border-radius: 50%;
+}
+header div{
+    width: 128px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+    animation: fromTop .7s 1s backwards;
+}
+header div:hover{
+    transform: scale(1.1);
+}
+
+body{
+    background-image: url(./assets/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+section{
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+
+}
+section h2{
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+    text-transform: uppercase;
+}
+section p{
+    color: #A1A1AA;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.47px;
+}
+section div{
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+ul li{
+    transition: transform .3s;
+}
+ul li:hover{
+    transform: scale(1.1);
+}
+.play-list img{
+    border-radius: 8px;
+    width: 160px;
+}
+.channel-list img{
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443E54;
+}
+.social-list{
+    font-size: 30px;
+    gap: 20px;
+}
+
+
+
+/* animation */
+
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main section{
+    animation: fromBottom .3s backwards;
+}
+main section:nth-child(1){
+    animation-delay: .0s;
+}
+main section:nth-child(2){
+    animation-delay: .4s;
+}
+main section:nth-child(3){
+    animation-delay: .8s;
+}
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
